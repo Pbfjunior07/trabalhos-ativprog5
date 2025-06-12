@@ -1,0 +1,74 @@
+body {
+    background-color: #ddd;
+    color: #444;
+    font-family: "Helvetica Neue", Arial, Helvetica, sans-serif;
+    line-height: 1.5;
+    width: 60%;
+    height: 60%;
+    margin: 0 auto;
+    padding: 10px;
+}
+
+main {
+    background-color: #ffffff;
+    margin-right: 20px;
+    margin-left: 20px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    padding: 10px 20px 20px 10px;
+    border-radius: 10px;
+
+}
+
+#fotoAutor{
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    border: 3px solid #007bff;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    object-fit: cover;
+    transition: all 0.3s ease-in-out;
+}
+
+
+section {
+
+    border-top: 1px solid #ddd;
+    
+
+}
+
+h1, h2 {
+    color: rgb(140, 76, 8);
+    line-height: 0px;
+}
+
+h2.toggle-content {
+    cursor: pointer;
+    /* Opcional: Adicionar um pequeno estilo visual para indicar que é clicável */
+    text-decoration: underline dotted;
+    color: #333; /* Cor original */
+    transition: color 0.3s ease;
+}
+
+h2.toggle-content:hover {
+    color: #007bff; /* Cor ao passar o mouse */
+}
+
+/* Classe para esconder o conteúdo */
+.content-wrapper.hidden {
+    display: none; /* Este é o truque principal para remover do layout */
+}
+
+/* Estilo opcional para o h2 quando o conteúdo estiver escondido */
+h2.toggle-content.collapsed {
+    color: #dc3545; /* Muda a cor para indicar que está "colapsado" */
+    text-decoration: none; /* Remove o sublinhado */
+}
+
+h2.toggle-content.collapsed::after {
+    content: " (clique para expandir)"; /* Adiciona um texto "expandir" */
+    font-size: 0.8em;
+    font-weight: normal;
+    color: #6c757d;
+}
